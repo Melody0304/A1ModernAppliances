@@ -1,4 +1,4 @@
-﻿using ModernAppliances.Entities;
+using ModernAppliances.Entities;
 using ModernAppliances.Entities.Abstract;
 using ModernAppliances.Helpers;
 using System;
@@ -197,12 +197,12 @@ namespace ModernAppliances
                 grade = "Any";
             }
             // Test input is "1"
-            if (userInput4 == "1") 
+            else if (userInput4 == "1") 
             {
                 // Assign "Residential" to grade
                 grade = "Residential";
             }
-            if (userInput4 == "2") 
+            else if (userInput4 == "2") 
             {
                 // Assign "Commercial" to grade
                 grade = "Commercial";
@@ -212,11 +212,12 @@ namespace ModernAppliances
             {
                 // Write "Invalid option."
                 Console.WriteLine("Invalid option.");
+                // Return to calling (previous) method
+                // return;
+                return;
             }
 
-            // Return to calling (previous) method
-            // return;
-            return;
+               
 
             // Write "Possible options:"
             Console.WriteLine("Possible options:");
@@ -320,14 +321,14 @@ namespace ModernAppliances
             }
  
             // Test input is "1"
-            if (userInput6 == "1") 
+            else if (userInput6 == "1") 
             {
                 // Assign 'K' to room type variable
                 roomType= 'K';
             }
             
             // Test input is "2"
-            if(userInput6 == "2")
+            else if(userInput6 == "2")
             {
                 // Assign 'W' to room type variable
                 roomType= 'W';
@@ -338,12 +339,13 @@ namespace ModernAppliances
             {
                 // Write "Invalid option."
                 Console.WriteLine("Invalid option.");
+                // Return to calling method
+                // return;
+                return;
 
             }
 
-            // Return to calling method
-            // return;
-            return;
+            
 
             // Create variable that holds list of 'found' appliances
             List<Appliance> list = new List<Appliance>();
@@ -404,28 +406,28 @@ namespace ModernAppliances
             }
 
             // Test input is "1"
-            if (userInput7 == "1")
+            else if (userInput7 == "1")
             {
                 // Assign "Qt" to sound rating variable
                 soundRating = "Qt";
             }
 
             // Test input is "2"
-            if (userInput7 == "2")
+            else if (userInput7 == "2")
             {
                 // Assign "Qr" to sound rating variable
                 soundRating = "Qr";
             }
 
             // Test input is "3"
-            if (userInput7 == "3")
+            else if (userInput7 == "3")
             {
                 // Assign "Qu" to sound rating variable
                 soundRating = "Qu";
             }
 
             // Test input is "4"
-            if (userInput7 == "4")
+            else if (userInput7 == "4")
             {
                 // Assign "M" to sound rating variable
                 soundRating = "M";
@@ -436,10 +438,11 @@ namespace ModernAppliances
             {
                 // Write "Invalid option."
                 Console.WriteLine(" Invalid option.");
+                // Return to calling method
+                return;
             }
 
-            // Return to calling method
-            return;
+            
 
             // Create variable that holds list of found appliances
             List<Appliance> list = new List<Appliance>();
@@ -513,7 +516,7 @@ namespace ModernAppliances
                     list.Add(appliance);
                 }
                 // Test inputted appliance type is "1"
-                if (userInput8 == "1")
+                else if(userInput8 == "1")
                 {
                     // Test current appliance type is Refrigerator
                     if (userInput9 == "Refrigerator")
@@ -523,7 +526,7 @@ namespace ModernAppliances
                     }
                 }
                 // Test inputted appliance type is "2"
-                if (userInput8 == "2")
+                else if (userInput8 == "2")
                 {
                     // Test current appliance type is Vacuum
                     if (userInput9 == "Vacuum")
@@ -533,7 +536,7 @@ namespace ModernAppliances
                     }
                 }
                 // Test inputted appliance type is "3"
-                if (userInput8 == "3")
+                else if (userInput8 == "3")
                 {
                     // Test current appliance type is Microwave
                     if (userInput9 == "Microwave")
@@ -543,7 +546,7 @@ namespace ModernAppliances
                     }
                 }
                 // Test inputted appliance type is "4"
-                if (userInput8 == "4")
+                else if (userInput8 == "4")
                 {
                     // Test current appliance type is Dishwasher
                     if (userInput9 == "Dishwasher")
